@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Login - 07 savory cravings</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+<header>
+
+    <h1>🍔 07 savory cravings</h1>
+
+    <p>Administrator Login</p>
+
+</header>
+
+
+<section class="admin-login">
+
+    <h2>🔐 Admin Login</h2>
+
+    <p>
+        Login to access the 07 savory cravings
+        administration dashboard.
+    </p>
+
+
+    <form onsubmit="adminLogin(event)">
+
+        <input
+            type="text"
+            id="adminUsername"
+            placeholder="Admin Username"
+            required
+        >
+
+
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Admin Password"
+            required
+        >
+
+
+        <button type="submit">
+
+            👑 Login as Admin
+
+        </button>
+
+    </form>
+
+
+    <p id="loginMessage"></p>
+
+
+    <a href="index.html">
+
+        ← Back to Customer Website
+
+    </a>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
