@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - 07 savory cravings</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body onload="startAdminDashboard()">
+
+
+<header>
+
+    <h1>🍔 07 savory cravings</h1>
+
+    <p>👑 Admin Dashboard</p>
+
+</header>
+
+
+<section class="admin-panel">
+
+    <h2>👑 Welcome, Admin</h2>
+
+    <p>
+        You are logged in as the administrator.
+    </p>
+
+
+    <!-- DASHBOARD STATS -->
+
+    <div class="admin-buttons">
+
+        <button onclick="loadAdminOrders()">
+            📦 Refresh Orders
+        </button>
+
+        <button onclick="loadAdminMessages()">
+            💬 Refresh Messages
+        </button>
+
+        <button onclick="window.location.href='index.html'">
+            🏠 Customer Website
+        </button>
+
+        <button onclick="adminLogout()">
+            🚪 Logout
+        </button>
+
+    </div>
+
+
+    <!-- NEW ORDERS -->
+
+    <div class="admin-section">
+
+        <h3>
+            📦 New Customer Orders
+        </h3>
+
+        <p>
+            Total Orders:
+            <strong id="orderCount">0</strong>
+        </p>
+
+
+        <div id="adminOrders">
+
+            <p>
+                No orders yet.
+            </p>
+
+        </div>
+
+
+        <button onclick="loadAdminOrders()">
+            🔄 Refresh Orders
+        </button>
+
+        <button onclick="clearOrders()">
+            🗑️ Clear All Orders
+        </button>
+
+    </div>
+
+
+    <!-- CUSTOMER MESSAGES -->
+
+    <div class="admin-section">
+
+        <h3>
+            💬 Customer Chat / Messages
+        </h3>
+
+        <p>
+            Total Messages:
+            <strong id="messageCount">0</strong>
+        </p>
+
+
+        <div id="adminMessages">
+
+            <p>
+                No customer messages yet.
+            </p>
+
+        </div>
+
+
+        <button onclick="loadAdminMessages()">
+            🔄 Refresh Messages
+        </button>
+
+        <button onclick="clearMessages()">
+            🗑️ Clear All Messages
+        </button>
+
+    </div>
+
+
+</section>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+function startAdminDashboard() {
+
+    checkAdminLogin();
+
+    loadAdminOrders();
+
+    loadAdminMessages();
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
